@@ -11,4 +11,9 @@ class ContextAwareCast implements Cast
     {
         return $value . '+' . json_encode($context);
     }
+
+    public function preValidationRules(DataProperty $property, mixed $value): array
+    {
+
+    }
 }

@@ -19,6 +19,11 @@ class SimpleCastable implements Castable
             {
                 return new SimpleCastable($value);
             }
+
+            public function preValidationRules(DataProperty $property, mixed $value): array
+            {
+
+            }
         };
     }
 }

@@ -46,4 +46,9 @@ class DateTimeInterfaceCast implements Cast
 
         return $datetime;
     }
+
+    public function preValidationRules(DataProperty $property, mixed $value): array
+    {
+
+    }
 }

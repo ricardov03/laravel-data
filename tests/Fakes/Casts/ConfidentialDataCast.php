@@ -12,4 +12,9 @@ class ConfidentialDataCast implements Cast
     {
         return SimpleData::from('CONFIDENTIAL');
     }
+
+    public function preValidationRules(DataProperty $property, mixed $value): array
+    {
+
+    }
 }

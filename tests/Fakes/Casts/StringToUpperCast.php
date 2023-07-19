@@ -11,4 +11,9 @@ class StringToUpperCast implements Cast
     {
         return strtoupper($value);
     }
+
+    public function preValidationRules(DataProperty $property, mixed $value): array
+    {
+
+    }
 }

@@ -29,4 +29,9 @@ class EnumCast implements Cast
             throw CannotCastEnum::create($type, $value);
         }
     }
+
+    public function preValidationRules(DataProperty $property, mixed $value): array
+    {
+
+    }
 }
