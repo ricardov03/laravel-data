@@ -1,8 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Validator;
-use Spatie\LaravelData\Rules\InitialPropertyRule;
-use Spatie\LaravelData\Support\DataConfig;
 use Spatie\LaravelData\Tests\TestSupport\DataPreValidationAsserter;
 
 it('can pre validate strings', function () {
@@ -93,7 +90,7 @@ it('can pre validate union types', function () {
         ->assertOk(['union' => ['array']])
         ->assertErrors(['union' => null], ['union' => [
             __('validation.required', ['attribute' => 'union']),
-            __('validation.array', ['attribute' => 'union']) . ' or ' .  __('validation.string', ['attribute' => 'union'])
+            __('validation.array', ['attribute' => 'union']) . ' or ' .  __('validation.string', ['attribute' => 'union']),
         ]]);
 });
 

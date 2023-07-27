@@ -3,7 +3,7 @@
 use Spatie\LaravelData\Data;
 
 it('can handle multiple cases', function () {
-    $stringable = new class implements Stringable {
+    $stringable = new class () implements Stringable {
         public function __toString()
         {
             return 'stringable';
