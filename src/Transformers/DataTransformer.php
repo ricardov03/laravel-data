@@ -26,12 +26,16 @@ class DataTransformer
 {
     protected DataConfig $config;
 
+    private static ?self $instance = null;
+
     public static function create(
         bool $transformValues,
         WrapExecutionType $wrapExecutionType,
         bool $mapPropertyNames,
     ): self {
-        return new self($transformValues, $wrapExecutionType, $mapPropertyNames);
+        return self::$instance ??= new self($transformValues, $wrapExecutionType, $mapPropertyNames);
+
+//        return new self($transformValues, $wrapExecutionType, $mapPropertyNames);
     }
 
     public function __construct(
