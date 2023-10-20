@@ -35,7 +35,7 @@ class DataTransformer
     ): self {
         return self::$instance ??= new self($transformValues, $wrapExecutionType, $mapPropertyNames);
 
-//        return new self($transformValues, $wrapExecutionType, $mapPropertyNames);
+        //        return new self($transformValues, $wrapExecutionType, $mapPropertyNames);
     }
 
     public function __construct(
